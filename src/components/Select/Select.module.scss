@@ -1,0 +1,46 @@
+.select {
+  position: relative;
+
+  .selectHeader {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 13rem;
+    height: 2.3rem;
+    border: 1px solid #DEDBDC;
+
+
+    .selectCurrent {
+      padding: 0 1rem;
+    }
+
+    .selectIcon {
+      width: 0.8rem;
+      height: 1rem;
+      margin: 0 auto;
+    }
+  }
+
+  .selectBody {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    border: 1px solid #DEDBDC;
+    border-top: 0;
+
+    .selectItem {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background-color: #DEDBDC;
+      }
+    }
+  }
+}
+
+.isActive .selectBody{
+  display: block;
+}

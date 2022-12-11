@@ -1,0 +1,13 @@
+.searchInput {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  height: 2.4rem;
+  padding: 0.5rem;
+  border: 1px solid #DEDBDC;
+
+  input {
+    width: 95%;
+    background-color: inherit;
+  }
+}

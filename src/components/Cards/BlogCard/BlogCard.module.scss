@@ -1,0 +1,47 @@
+.blogCard {
+  display: flex;
+  width: 80%;
+  min-height: 10rem;
+  padding: 1rem;
+  border-bottom: 1px solid #DEDBDC;
+
+  .blogImageWrapper {
+    width: 10rem;
+
+    .blogImage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFFFFF;
+      border: 1px solid #DEDBDC;
+      border-radius: 50%;
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+
+  .blogCardInfo {
+    width: 90%;
+    height: 80%;
+
+    .blogCardInfoHeader {
+      padding-bottom: 1rem;
+
+      .blogTitle {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        padding-bottom: 0.3rem;
+      }
+    }
+
+    .blogWebsite {
+      color: #737067;
+    }
+
+    .blogDescription {
+      line-height: 20px;
+    }
+
+  }
+}
