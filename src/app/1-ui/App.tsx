@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 
+import AppRouter from '../../components/AppRouter/AppRouter';
 import NavbarBlock from '../../components/NavbarBlock/NavbarBlock';
 import SearchInput from '../../components/SearchInput/SearchInput';
 import Select from '../../components/Select/Select';
-import Blogs from '../../pages/Blogs/1-ui/Blogs';
 
 import s from './App.module.scss';
 
@@ -22,7 +22,7 @@ const App = (): ReactElement => {
               <SearchInput />
               <Select />
             </div>
-            <Blogs />
+            <AppRouter />
           </div>
         </main>
       </div>
