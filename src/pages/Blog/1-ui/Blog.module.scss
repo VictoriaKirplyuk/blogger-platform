@@ -1,0 +1,118 @@
+.blogWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .blog {
+    padding: 1rem 0;
+    border-bottom: 1px solid #DEDBDC;
+
+    .blogHeader {
+      display: flex;
+
+      .blogHeaderTitle {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+
+        &:before {
+          content: "\2190";
+          font-size: 20px;
+          padding: 0.5rem;
+        }
+      }
+    }
+
+    .blogBackground {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FFFFFF;
+      height: 23rem;
+
+      img {
+        width: 77px;
+        height: 63px;
+      }
+    }
+
+    .blogInfo {
+      display: flex;
+      padding: 1rem 0;
+
+      .blogImage {
+
+      }
+
+      .blogGeneralDescription {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 70%;
+        padding: 0.5rem 1rem;
+
+        .blogTitle {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 24px;
+        }
+
+        .blogDate {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.02em;
+          color: #797476;
+        }
+
+        .blogWebsite {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          color: #737067;
+        }
+
+        .blogDescription {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .blogFooter {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #797476;
+    }
+  }
+}
+
+.postList {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  width: 90%;
+
+  @media screen and (max-width: 1258px) {
+    justify-content: space-evenly;
+  }
+}
+
+.imageCircle {
+  border: 5px solid #DEDBDC;
+  width: 144px;
+  height: 144px;
+}
