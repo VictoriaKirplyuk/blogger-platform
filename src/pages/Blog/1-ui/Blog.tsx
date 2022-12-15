@@ -15,7 +15,7 @@ const Blog = (): ReactElement => {
       <div className={s.blogWrapper}>
         <div className={s.blog}>
           <div className={s.blogHeader}>
-            <div className={s.blogHeaderTitle}>Back to blog</div>
+            <div className={s.blogHeaderTitle}>Back to blogs</div>
           </div>
 
           <div className={s.blogBackground}>
