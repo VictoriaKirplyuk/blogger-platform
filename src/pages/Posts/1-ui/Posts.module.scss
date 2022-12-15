@@ -1,0 +1,17 @@
+.postList {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 40%;
+
+  @media screen and (max-width: 1258px) {
+    justify-content: space-evenly;
+  }
+}
+
+.searchBlock {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem 0;
+  width: 100%;
+}

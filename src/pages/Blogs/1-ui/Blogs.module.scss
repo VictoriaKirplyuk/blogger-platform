@@ -1,11 +1,6 @@
-.blogs {
-
-  .blogList {
-    padding: 1rem 0;
-  }
-
-  .blogsFooter {
-    width: 100%;
-    text-align: center;
-  }
+.searchBlock {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+  width: 50%;
 }

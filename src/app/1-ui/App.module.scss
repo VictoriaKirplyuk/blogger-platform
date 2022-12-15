@@ -32,22 +32,7 @@
 
       .content {
         min-height: 100%; //обертка для пэйджа
-
-        .contentTitle {
-          font-style: normal;
-          font-weight: 500;
-          font-size: 1.4rem;
-          padding-bottom: 0.7rem;
-          border-bottom: 1px solid #DEDBDC;
-        }
-
-        .searchBlock {
-          display: flex;
-          justify-content: space-around;
-          padding: 1.5rem 0;
-          width: 50%;
-        }
-
+        position: relative;
       }
     }
   }

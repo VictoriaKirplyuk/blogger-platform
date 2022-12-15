@@ -1,5 +1,5 @@
 export enum RouteNames {
   DEFAULT = '/',
   BLOGS = '/blogs',
-  POSTS = 'posts',
+  POSTS = '/posts',
 }

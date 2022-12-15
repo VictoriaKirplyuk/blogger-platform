@@ -2,6 +2,7 @@ import { ComponentType } from 'react';
 
 import { RouteNames } from '../enums/routes';
 import Blogs from '../pages/Blogs/1-ui/Blogs';
+import Posts from '../pages/Posts/1-ui/Posts';
 
 export interface IRouter {
   path: RouteNames;
@@ -11,4 +12,5 @@ export interface IRouter {
 export const publicRouter: IRouter[] = [
   { path: RouteNames.DEFAULT, component: Blogs },
   { path: RouteNames.BLOGS, component: Blogs },
+  { path: RouteNames.POSTS, component: Posts },
 ];

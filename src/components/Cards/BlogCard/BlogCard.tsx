@@ -1,16 +1,14 @@
 import React, { ReactElement } from 'react';
 
-import photoIcon from '../../../assets/img/photo/photo-icon.svg';
+import DefaultAvatar from '../../DefaultAvatar/DefaultAvatar';
 
 import s from './BlogCard.module.scss';
 
 const BlogCard = (): ReactElement => {
   return (
     <div className={s.blogCard}>
-      <div className={s.blogImageWrapper}>
-        <div className={s.blogImage}>
-          <img src={photoIcon} alt="photoIcon" />
-        </div>
+      <div className={s.blogImage}>
+        <DefaultAvatar />
       </div>
       <div className={s.blogCardInfo}>
         <div className={s.blogCardInfoHeader}>
