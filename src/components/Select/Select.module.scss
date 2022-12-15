@@ -1,3 +1,5 @@
+@import 'src/style/variables/colors/common';
+
 .select {
   position: relative;
 
@@ -7,7 +9,7 @@
     cursor: pointer;
     width: 13rem;
     height: 2.3rem;
-    border: 1px solid #DEDBDC;
+    border: 1px solid $grayBorder;
 
 
     .selectCurrent {
@@ -27,7 +29,7 @@
     left: 0;
     right: 0;
     top: 100%;
-    border: 1px solid #DEDBDC;
+    border: 1px solid $grayBorder;
     border-top: 0;
 
     .selectItem {
@@ -35,7 +37,7 @@
       padding: 0.5rem 1rem;
 
       &:hover {
-        background-color: #DEDBDC;
+        background-color: $grayBorder;
       }
     }
   }

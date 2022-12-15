@@ -1,9 +1,11 @@
+@import '../../../style/variables/colors/common';
+
 .blogCard {
   display: flex;
   width: 80%;
   min-height: 10rem;
   padding: 1rem;
-  border-bottom: 1px solid #DEDBDC;
+  border-bottom: 1px solid $grayBorder;
 
   .blogImage {
     width: 10rem;
@@ -27,7 +29,7 @@
     }
 
     .blogWebsite {
-      color: #737067;
+      color: $darkGrayText;
     }
 
     .blogDescription {

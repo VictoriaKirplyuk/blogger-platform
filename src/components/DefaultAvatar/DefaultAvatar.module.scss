@@ -1,9 +1,11 @@
+@import 'src/style/variables/colors/common';
+
 .imageCircle {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
-  border: 1px solid #DEDBDC;
+  background: #FFFFFF;
+  border: 1px solid $grayBorder;
   border-radius: 50%;
   width: 120px;
   height: 120px;
