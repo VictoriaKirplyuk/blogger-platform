@@ -1,11 +1,11 @@
-import { IBlog } from '../../../common/types/page-types/blog-type/blog-types';
+import { IBlog } from '../../../common/types/page-types/blog-types/blog-types';
 import { IPage } from '../../../common/types/page-types/page-types';
 
-export interface IBlogInitState {
+export interface IBlogsInitState {
   blogList: IPage<IBlog>;
 }
 
-export const blogsInitState: IBlogInitState = {
+export const blogsInitState: IBlogsInitState = {
   blogList: {
     pagesCount: 0,
     page: 0,

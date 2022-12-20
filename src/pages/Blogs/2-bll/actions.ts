@@ -1,4 +1,4 @@
-import { IBlog } from '../../../common/types/page-types/blog-type/blog-types';
+import { IBlog } from '../../../common/types/page-types/blog-types/blog-types';
 import { IPage } from '../../../common/types/page-types/page-types';
 
 export const setBlogs = (payload: { blogs: IPage<IBlog> }) =>

@@ -9,6 +9,7 @@
 }
 
 .contentList {
+  position: relative;
   padding: 1.7rem 0;
 }
 
@@ -16,5 +17,12 @@
   width: 100%;
   position: absolute;
   bottom: -1.5rem;
+  text-align: center;
+}
+
+.noContent {
+  position: absolute;
+  left: 50%;
+  color: $darkGrayText;
   text-align: center;
 }

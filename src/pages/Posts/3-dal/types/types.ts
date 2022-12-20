@@ -1,5 +1,5 @@
 import { ServerResponse } from '../../../../common/types/api-types/api-response';
-import { IBlog } from '../../../../common/types/page-types/blog-types/blog-types';
 import { IPage } from '../../../../common/types/page-types/page-types';
+import { IPost } from '../../../../common/types/page-types/post-types/post-types';
 
-export type BlogsResponse = ServerResponse<IPage<IBlog>>;
+export type PostsResponse = ServerResponse<IPage<IPost>>;

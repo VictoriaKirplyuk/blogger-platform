@@ -9,8 +9,6 @@ export const blogsAPI = {
   getBlogs: (pageNumber: number = defaultPage, pageSize: number = defaultSize) => {
     return instance
       .get<BlogsResponse>(`blogs?pageNumber=${pageNumber}&pageSize=${pageSize}`)
-      .then(response => {
-        return response.data;
-      });
+      .then(response => response.data);
   },
 };

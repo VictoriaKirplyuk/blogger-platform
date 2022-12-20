@@ -5,6 +5,7 @@ import BlogCard from '../../../components/Cards/BlogCard/BlogCard';
 import SearchInput from '../../../components/SearchInput/SearchInput';
 import Select from '../../../components/Select/Select';
 import { useAppDispatch } from '../../../hooks/useAppDispatch';
+import { useAppSelector } from '../../../hooks/useAppSelector';
 import pS from '../../Pages.module.scss';
 import { getBlogs } from '../2-bll/thunks/thunks';
 
@@ -12,6 +13,8 @@ import s from './Blogs.module.scss';
 
 const Blogs = (): ReactElement => {
   const dispatch = useAppDispatch();
+
+  const blogs = useAppSelector(state => state.blogs.blogList.items);
 
   useEffect(() => {
     dispatch(getBlogs());
@@ -25,10 +28,7 @@ const Blogs = (): ReactElement => {
         <Select />
       </div>
       <div className={pS.contentList}>
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {blogs.length ? <BlogCard /> : <div className={pS.noContent}>No blogs</div>}
       </div>
       <div className={pS.contentFooter}>
         <Button>Show more</Button>
