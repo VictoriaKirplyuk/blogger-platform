@@ -1,3 +1,5 @@
+@import 'src/style/variables/colors/background';
+
 .btn {
   padding: 1rem 2rem;
   background-color: inherit;
@@ -5,4 +7,9 @@
   font-style: normal;
   font-weight: 600;
   font-size: 1rem;
+
+  &:hover {
+    color: $darkGray;
+    border: 1px solid $darkGray;
+  }
 }

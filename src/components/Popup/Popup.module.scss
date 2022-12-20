@@ -1,0 +1,44 @@
+@import 'src/style/variables/colors/background';
+@import 'src/style/variables/colors/common';
+
+.popupBackground {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+
+  .popup {
+    background: $lightGray;
+    border-radius: 1rem;
+    padding: 4.5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .popupHeader {
+
+      .popupTitle {
+        text-align: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+      }
+
+      .popupDescription {
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: $darkGrayText;
+      }
+    }
+
+    .popupBody {}
+  }
+}

@@ -1,6 +1,11 @@
 .searchBlock {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 0.7rem;
   padding: 1.5rem 0;
-  width: 50%;
+  width: 90%;
+}
+
+.searchInput {
+  width: 30rem;
 }

@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect } from 'react';
 
 import Button from '../../../components/Button/Button';
 import BlogCard from '../../../components/Cards/BlogCard/BlogCard';
-import SearchInput from '../../../components/SearchInput/SearchInput';
+import Input from '../../../components/Input/Input';
 import Select from '../../../components/Select/Select';
 import { useAppDispatch } from '../../../hooks/useAppDispatch';
 import { useAppSelector } from '../../../hooks/useAppSelector';
@@ -24,7 +24,7 @@ const Blogs = (): ReactElement => {
     <>
       <h3 className={pS.contentTitle}>Blogs</h3>
       <div className={s.searchBlock}>
-        <SearchInput />
+        <Input style={s.searchInput} isSearch placeholder="Search" />
         <Select />
       </div>
       <div className={pS.contentList}>
