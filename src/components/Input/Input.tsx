@@ -12,16 +12,17 @@ type DefaultInputPropsType = DetailedHTMLProps<
 type InputPropsType = DefaultInputPropsType & {
   isSearch?: boolean;
   style?: string;
+  name: string;
 };
 
-const Input = ({ isSearch, style, ...rest }: InputPropsType): ReactElement => {
+const Input = ({ isSearch, style, name, ...rest }: InputPropsType): ReactElement => {
   const inputStyle: string = `${s.Input} ${style}`;
 
   return (
-    <div className={inputStyle}>
+    <label htmlFor={name} className={inputStyle}>
       {isSearch && <img src={searchIcon} alt="searchIcon" />}
-      <input {...rest} />
-    </div>
+      <input {...rest} name={name} id={name} />
+    </label>
   );
 };
 

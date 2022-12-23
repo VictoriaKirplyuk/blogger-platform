@@ -7,8 +7,16 @@ type DefaultButtonPropsType = DetailedHTMLProps<
   HTMLButtonElement
 >;
 
-const Button = ({ ...restProps }: DefaultButtonPropsType): ReactElement => {
-  return <button className={s.btn} type="button" {...restProps} />;
+type IBtnProps = {
+  isSubmitting?: boolean;
+} & DefaultButtonPropsType;
+
+const Button = ({ isSubmitting, ...restProps }: IBtnProps): ReactElement => {
+  return isSubmitting ? (
+    <button className={s.btn} type="submit" {...restProps} />
+  ) : (
+    <button className={s.btn} type="button" {...restProps} />
+  );
 };
 
 export default Button;

@@ -24,7 +24,7 @@ const Blogs = (): ReactElement => {
     <>
       <h3 className={pS.contentTitle}>Blogs</h3>
       <div className={s.searchBlock}>
-        <Input style={s.searchInput} isSearch placeholder="Search" />
+        <Input style={s.searchInput} isSearch placeholder="Search" name="search" />
         <Select />
       </div>
       <div className={pS.contentList}>

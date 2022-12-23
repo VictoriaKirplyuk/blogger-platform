@@ -1,45 +1,51 @@
-import { ReactElement, ReactNode, useState } from 'react';
-
-import { Dialog } from '@headlessui/react';
-
-import Button from '../Button/Button';
+import { ReactElement, ReactNode } from 'react';
 
 import s from './Popup.module.scss';
 
-interface IModal {
-  title?: string;
-  description?: string;
-  isShow: boolean;
-  modalBtnTitle?: string;
-  onModalBtnClick?: () => void;
+interface IPopup {
+  title: string;
+  description: string;
+  isActive: boolean;
+  setIsActive: (isActive: boolean) => void;
   children: ReactNode;
 }
 
 const Popup = ({
   title,
   description,
-  isShow,
-  modalBtnTitle,
-  onModalBtnClick,
+  isActive,
+  setIsActive,
   children,
-}: IModal): ReactElement => {
-  const [isOpen, setIsOpen] = useState<boolean>(isShow);
+}: IPopup): ReactElement => {
+  const popupStyle: string = isActive ? `${s.popup} ${s.active}` : `${s.popup}`;
+  const popupContentStyle: string = isActive
+    ? `${s.popupContent} ${s.active}`
+    : `${s.popupContent}`;
 
   return (
-    <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-      <div className={s.popupBackground}>
-        <Dialog.Panel className={s.popup}>
+    <div role="presentation" className={popupStyle} onClick={() => setIsActive(false)}>
+      <div
+        role="presentation"
+        className={popupContentStyle}
+        onClick={e => e.stopPropagation()}
+      >
+        <div role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
           <div className={s.popupHeader}>
-            <Dialog.Title className={s.popupTitle}>{title}</Dialog.Title>
-            <Dialog.Description className={s.popupDescription}>
-              {description}
-            </Dialog.Description>
+            {title && (
+              <div id="dialogTitle" className={s.popupTitle}>
+                {title}
+              </div>
+            )}
+            {description && (
+              <div id="dialogDesc" className={s.popupDescription}>
+                {description}
+              </div>
+            )}
           </div>
-          <div className={s.popupBody}>{children}</div>
-          {modalBtnTitle && <Button onClick={onModalBtnClick}>{modalBtnTitle}</Button>}
-        </Dialog.Panel>
+          <div>{children}</div>
+        </div>
       </div>
-    </Dialog>
+    </div>
   );
 };
 
