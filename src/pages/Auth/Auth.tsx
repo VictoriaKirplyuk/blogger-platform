@@ -10,6 +10,7 @@ const Auth = (): ReactElement => {
   const [isModalActive, setIsModalActive] = useState<boolean>(true);
   const [login, setLogin] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [disabled, setDisabled] = useState<boolean>(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -25,9 +26,14 @@ const Auth = (): ReactElement => {
     setPassword(e.currentTarget.value);
   };
 
+  const onModalBtnClick = (): void => {
+    setDisabled(true);
+    setIsModalActive(true);
+  };
+
   return (
     <div>
-      <button type="button" onClick={() => setIsModalActive(true)}>
+      <button type="button" onClick={onModalBtnClick} disabled={disabled}>
         Modal
       </button>
       <Popup
@@ -35,6 +41,7 @@ const Auth = (): ReactElement => {
         description="for administrator"
         isActive={isModalActive}
         setIsActive={setIsModalActive}
+        setDisabled={setDisabled}
       >
         <form className={s.loginForm} onSubmit={handleSubmit} noValidate>
           <div className={s.inputGroup}>
@@ -55,6 +62,31 @@ const Auth = (): ReactElement => {
           <Button isSubmitting>Sign in</Button>
         </form>
       </Popup>
+      {/* <Popup */}
+      {/*  title="Authorization" */}
+      {/*  description="for administrator" */}
+      {/*  isActive={isModalActive} */}
+      {/*  setIsActive={setIsModalActive} */}
+      {/* > */}
+      {/*  <form className={s.loginForm} onSubmit={handleSubmit} noValidate> */}
+      {/*    <div className={s.inputGroup}> */}
+      {/*      <Input */}
+      {/*        name="login" */}
+      {/*        placeholder="Login" */}
+      {/*        value={login} */}
+      {/*        onChange={onLoginChange} */}
+      {/*      /> */}
+      {/*      <Input */}
+      {/*        type="password" */}
+      {/*        name="password" */}
+      {/*        placeholder="Password" */}
+      {/*        value={password} */}
+      {/*        onChange={onPasswordChange} */}
+      {/*      /> */}
+      {/*    </div> */}
+      {/*    <Button isSubmitting>Sign in</Button> */}
+      {/*  </form> */}
+      {/* </Popup> */}
     </div>
   );
 };
