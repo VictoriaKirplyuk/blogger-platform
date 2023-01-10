@@ -1,6 +1,6 @@
-export type ServerResponse<T> = T | ResponseErrorType;
+export type ServerResponse<T> = T & ResponseErrorType;
 
-export type ResponseErrorType = { errorsMessages: IErrorMessage[] } | string;
+export type ResponseErrorType = { errorsMessages: IErrorMessage[] } & string;
 
 interface IErrorMessage {
   message: string;

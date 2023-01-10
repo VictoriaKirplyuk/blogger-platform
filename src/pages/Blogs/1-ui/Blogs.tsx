@@ -4,8 +4,8 @@ import Button from '../../../components/Button/Button';
 import BlogCard from '../../../components/Cards/BlogCard/BlogCard';
 import Input from '../../../components/Input/Input';
 import Select from '../../../components/Select/Select';
-import { useAppDispatch } from '../../../hooks/useAppDispatch';
-import { useAppSelector } from '../../../hooks/useAppSelector';
+import { useAppDispatch } from '../../../hooks/redux/useAppDispatch';
+import { useAppSelector } from '../../../hooks/redux/useAppSelector';
 import pS from '../../Pages.module.scss';
 import { getBlogs } from '../2-bll/thunks/thunks';
 

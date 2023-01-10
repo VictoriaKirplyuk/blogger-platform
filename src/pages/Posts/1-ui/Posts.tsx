@@ -3,8 +3,8 @@ import React, { ReactElement, useEffect } from 'react';
 import Button from '../../../components/Button/Button';
 import PostCard from '../../../components/Cards/PostCard/PostCard';
 import Select from '../../../components/Select/Select';
-import { useAppDispatch } from '../../../hooks/useAppDispatch';
-import { useAppSelector } from '../../../hooks/useAppSelector';
+import { useAppDispatch } from '../../../hooks/redux/useAppDispatch';
+import { useAppSelector } from '../../../hooks/redux/useAppSelector';
 import pS from '../../Pages.module.scss';
 import { getPosts } from '../2-bll/thunks/thunks';
 

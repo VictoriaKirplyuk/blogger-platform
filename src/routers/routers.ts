@@ -1,7 +1,7 @@
 import { ComponentType } from 'react';
 
 import { RouteNames } from '../enums/routes';
-import Auth from '../pages/Auth/Auth';
+import Login from '../pages/Auth/Login/1-ui/Login';
 import Blog from '../pages/Blog/1-ui/Blog';
 import Blogs from '../pages/Blogs/1-ui/Blogs';
 import Post from '../pages/Post/1-ui/Post';
@@ -18,5 +18,5 @@ export const publicRouter: IRouter[] = [
   { path: RouteNames.BLOG, component: Blog },
   { path: RouteNames.POSTS, component: Posts },
   { path: RouteNames.POST, component: Post },
-  { path: RouteNames.LOGIN, component: Auth },
+  { path: RouteNames.LOGIN, component: Login },
 ];

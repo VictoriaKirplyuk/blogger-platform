@@ -4,5 +4,5 @@ export enum RouteNames {
   BLOG = '/blog/:id',
   POSTS = '/posts',
   POST = '/post/:id',
-  LOGIN = '/admin/login',
+  LOGIN = '/login',
 }
