@@ -1,0 +1,56 @@
+@import 'src/style/variables/colors/background';
+
+.formWrapper {
+  background: white;
+  padding: 1.5rem 0;
+  border: 1.5px solid rgba(29, 33, 38, 0.1);
+  border-radius: 1rem;
+  width: 21rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.1rem;
+
+  h1 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  h2 {
+    color: $darkGray;
+  }
+
+  .link {
+    color: $darkGray;
+    transition: 0.5s;
+
+    &:hover {
+
+      &:after {
+        content: '\2B9C';
+        padding-left: 0.2rem;
+      }
+
+      &:before {
+        content: '\2B9E';
+        padding-right: 0.2rem;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+    text-align: center;
+
+    .inputGroup {
+      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}

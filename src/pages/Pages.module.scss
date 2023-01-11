@@ -1,5 +1,13 @@
 @import 'src/style/variables/colors/common';
 
+.pageWrapper {
+  width: 100%;
+  min-height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contentTitle {
   font-style: normal;
   font-weight: 500;

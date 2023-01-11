@@ -5,40 +5,44 @@ import { NavLink } from 'react-router-dom';
 import Button from '../../../../components/Button/Button';
 import Input from '../../../../components/Input/Input';
 import { RouteNames } from '../../../../enums/routes';
-import { useAppDispatch } from '../../../../hooks/redux/useAppDispatch';
 import { useInput } from '../../../../hooks/useInput';
 import pS from '../../../Pages.module.scss';
 import aS from '../../Auth.module.scss';
-import { login } from '../2-bll/thunks/thunks';
 
-const Login = (): ReactElement => {
-  const dispatch = useAppDispatch();
+const Registration = (): ReactElement => {
+  // const dispatch = useAppDispatch();
 
-  const loginOrEmail = useInput();
+  const login = useInput();
+  const email = useInput();
   const password = useInput();
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    if (loginOrEmail.value && password.value) {
-      dispatch(login(loginOrEmail.value, password.value));
-    }
+    console.log('hey');
   };
 
   return (
     <div className={pS.pageWrapper}>
       <div className={aS.formWrapper}>
-        <h1>Authorization</h1>
-        <NavLink to={RouteNames.REGISTRATION} className={aS.link}>
-          Don&#39;t have an account?
+        <h1>Registration</h1>
+        <NavLink to={RouteNames.LOGIN} className={aS.link}>
+          Already have an account?
         </NavLink>
         <form className={aS.form} onSubmit={handleSubmit} noValidate>
           <div className={aS.inputGroup}>
             <Input
-              name="loginOrEmail"
-              placeholder="Login or email"
-              value={loginOrEmail.value}
-              onChange={loginOrEmail.onChange}
+              name="login"
+              placeholder="Login"
+              value={login.value}
+              onChange={login.onChange}
+              autoComplete="off"
+            />
+            <Input
+              name="email"
+              placeholder="Email"
+              value={email.value}
+              onChange={email.onChange}
               autoComplete="off"
             />
             <Input
@@ -56,4 +60,4 @@ const Login = (): ReactElement => {
   );
 };
 
-export default Login;
+export default Registration;

@@ -1,3 +1,10 @@
+export enum LoadStatus {
+  IDLE = 'idle',
+  LOADING = 'loading',
+  SUCCESS = 'success',
+  ERROR = 'error',
+}
+
 export enum RouteNames {
   DEFAULT = '/',
   BLOGS = '/blogs',
@@ -5,4 +12,5 @@ export enum RouteNames {
   POSTS = '/posts',
   POST = '/post/:id',
   LOGIN = '/login',
+  REGISTRATION = '/registration',
 }

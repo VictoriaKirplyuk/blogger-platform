@@ -9,7 +9,7 @@ export const loginReducer = (
   switch (action.type) {
     case 'AUTH/SET-IS-LOGGED-IN': {
       return {
-        isLoggedIn: action.payload.isLoggedIn,
+        ...action.payload,
       };
     }
     default: {

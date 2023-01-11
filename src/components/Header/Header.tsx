@@ -23,7 +23,7 @@ const Header = (): ReactElement => {
             <NavLink to={RouteNames.LOGIN} className={s.navItem}>
               Sign in
             </NavLink>
-            <NavLink to="#" className={s.navItem}>
+            <NavLink to={RouteNames.REGISTRATION} className={s.navItem}>
               Sign up
             </NavLink>
           </>
