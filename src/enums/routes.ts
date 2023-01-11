@@ -13,4 +13,5 @@ export enum RouteNames {
   POST = '/post/:id',
   LOGIN = '/login',
   REGISTRATION = '/registration',
+  REGISTRATION_CONFIRM = '/registration/confirm',
 }
