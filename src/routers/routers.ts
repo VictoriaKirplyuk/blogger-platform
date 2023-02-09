@@ -3,7 +3,7 @@ import { ComponentType } from 'react';
 import { RouteNames } from '../enums/routes';
 import Login from '../pages/Auth/Login/1-ui/Login';
 import Registration from '../pages/Auth/Registration/1-ui/Registration';
-import RegistrationConfirm from '../pages/Auth/RegistrationConfirm/RegistrationConfirm';
+import RegistrationConfirm from '../pages/Auth/Registration/1-ui/RegistrationConfirm';
 import Blog from '../pages/Blog/1-ui/Blog';
 import Blogs from '../pages/Blogs/1-ui/Blogs';
 import Post from '../pages/Post/1-ui/Post';

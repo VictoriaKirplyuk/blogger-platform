@@ -2,11 +2,11 @@ import React, { FormEvent, ReactElement } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import Button from '../../../components/Button/Button';
-import Input from '../../../components/Input/Input';
-import { useInput } from '../../../hooks/useInput';
-import pS from '../../Pages.module.scss';
-import aS from '../Auth.module.scss';
+import Button from '../../../../components/Button/Button';
+import Input from '../../../../components/Input/Input';
+import { useInput } from '../../../../hooks/useInput';
+import pS from '../../../Pages.module.scss';
+import aS from '../../Auth.module.scss';
 
 const RegistrationConfirm = (): ReactElement => {
   // const dispatch = useAppDispatch();

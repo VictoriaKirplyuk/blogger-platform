@@ -1,16 +1,22 @@
 import React, { FormEvent, ReactElement } from 'react';
 
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 
 import Button from '../../../../components/Button/Button';
 import Input from '../../../../components/Input/Input';
+import { StepAuth } from '../../../../enums/auth';
 import { RouteNames } from '../../../../enums/routes';
+import { useAppDispatch } from '../../../../hooks/redux/useAppDispatch';
+import { useAppSelector } from '../../../../hooks/redux/useAppSelector';
 import { useInput } from '../../../../hooks/useInput';
 import pS from '../../../Pages.module.scss';
 import aS from '../../Auth.module.scss';
+import { registration } from '../2-bll/thunks/thunks';
 
 const Registration = (): ReactElement => {
-  // const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
+
+  const stepAuth = useAppSelector(state => state.registration.stepAuth);
 
   const login = useInput();
   const email = useInput();
@@ -19,8 +25,12 @@ const Registration = (): ReactElement => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    console.log('hey');
+    dispatch(registration(login.value, password.value, email.value));
   };
+
+  if (stepAuth === StepAuth.REGISTRATION_CONFIRM) {
+    return <Navigate to={RouteNames.REGISTRATION_CONFIRM} />;
+  }
 
   return (
     <div className={pS.pageWrapper}>

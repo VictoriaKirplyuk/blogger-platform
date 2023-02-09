@@ -8,20 +8,30 @@
     height: 3rem;
     margin: 0 0 1.5rem 0;
     padding-left: 25%;
-    border-right: 2px solid #F8346B;
     cursor: pointer;
 
     .navItemLogo {
       width: 1rem;
       height: 1rem;
       margin-right: 4%;
-
     }
 
     .navItemTitle {
       font-style: normal;
       font-weight: 400;
       font-size: 1.3rem;
+      color: black;
+    }
+  }
+
+  .navItemActive {
+    border-right: 2px solid #F8346B;
+
+    .navItemLogo * {
+      fill: #F8346B;
+    }
+
+    .navItemTitle {
       color: #F8346B;
     }
   }

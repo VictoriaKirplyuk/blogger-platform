@@ -8,9 +8,9 @@ export enum LoadStatus {
 export enum RouteNames {
   DEFAULT = '/',
   BLOGS = '/blogs',
-  BLOG = '/blog/:id',
+  BLOG = '/blogs/:id',
   POSTS = '/posts',
-  POST = '/post/:id',
+  POST = '/posts/:id',
   LOGIN = '/login',
   REGISTRATION = '/registration',
   REGISTRATION_CONFIRM = '/registration/confirm',

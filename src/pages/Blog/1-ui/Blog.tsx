@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 import photoIcon from '../../../assets/img/photo/photo-icon.svg';
 import Button from '../../../components/Button/Button';
 import PostCard from '../../../components/Cards/PostCard/PostCard';
@@ -9,13 +11,23 @@ import pS from '../../Pages.module.scss';
 import s from './Blog.module.scss';
 
 const Blog = (): ReactElement => {
+  const navigate = useNavigate();
+
+  const onBackBlogsBtnClick = (): void => navigate('/blogs');
+
   return (
     <>
       <h3 className={pS.contentTitle}>Blogs</h3>
       <div className={s.blogWrapper}>
         <div className={s.blog}>
           <div className={s.blogHeader}>
-            <div className={s.blogHeaderTitle}>Back to blogs</div>
+            <button
+              type="button"
+              className={s.blogHeaderTitle}
+              onClick={onBackBlogsBtnClick}
+            >
+              Back to blogs
+            </button>
           </div>
 
           <div className={s.blogBackground}>
